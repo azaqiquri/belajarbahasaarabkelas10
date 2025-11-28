@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <title>Bahasa Arab Kelas X MA - Menu Utama</title><!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script><!-- Canva SDKs -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Smooth scrolling for internal anchors (if used later) */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Simple focus ring for accessibility */
+    :focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+
+    /* Subtle geometric background pattern using gradients */
+    .islamic-bg {
+      background-image:
+        radial-gradient(circle at 0% 0%, rgba(255,255,255,0.18) 0, rgba(255,255,255,0.18) 2px, transparent 3px),
+        radial-gradient(circle at 100% 100%, rgba(255,255,255,0.14) 0, rgba(255,255,255,0.14) 2px, transparent 3px),
+        linear-gradient(135deg, rgba(255,255,255,0.18) 0, rgba(255,255,255,0.18) 1px, transparent 0),
+        linear-gradient(45deg, rgba(255,255,255,0.16) 0, rgba(255,255,255,0.16) 1px, transparent 0);
+      background-size: 80px 80px, 80px 80px, 32px 32px, 32px 32px;
+      background-position: 0 0, 100% 100%, 0 0, 0 0;
+    }
+
+    /* Simple decorative "calligraphy-like" Arabic accent */
+    .arabic-accent {
+      opacity: 0.14;
+      pointer-events: none;
+    }
+
+    /* Soft card hover */
+    .lesson-card {
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    }
+    .lesson-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(15,23,42,0.11);
+    }
+
+    /* Bottom nav shadow */
+    .bottom-nav {
+      box-shadow: 0 -8px 20px rgba(15,23,42,0.16);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="w-full h-full">
+  <div id="app-root" class="w-full h-full islamic-bg flex flex-col">
+   <header class="w-full pt-4 pb-2 px-5 md:px-8 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-3"><!-- Small geometric badge -->
+     <div class="relative w-10 h-10 md:w-11 md:h-11 flex items-center justify-center">
+      <div id="badge-outer" class="absolute inset-0 rounded-xl rotate-45 opacity-80"></div>
+      <div id="badge-inner" class="relative w-6 h-6 md:w-7 md:h-7 rounded-lg rotate-45 flex items-center justify-center"><span id="badge-text" class="text-xs font-semibold text-white -rotate-45 select-none">ب</span>
+      </div>
+     </div>
+     <div class="flex flex-col">
+      <h1 id="main-title" class="font-semibold text-slate-900 tracking-tight">Bahasa Arab Kelas X MA</h1>
+      <p id="subtitle-text" class="text-xs md:text-sm text-slate-700">Pilih bab pembelajaran atau evaluasi untuk mulai belajar.</p>
+     </div>
+    </div><!-- Small corner decorative Arabic text -->
+    <div class="hidden md:block arabic-accent"><span id="corner-accent" class="block text-right text-2xl font-semibold select-none"> ﷽ </span>
+    </div>
+   </header>
+   <main class="flex-1 px-5 md:px-8 pb-24 pt-3 flex flex-col"><!-- Semester Badge Row -->
+    <section class="flex items-center justify-between mb-4" aria-label="Informasi semester">
+     <div class="flex items-center gap-2">
+      <div id="semester-pill" class="inline-flex items-center px-3 py-1 rounded-full border border-transparent text-xs md:text-sm font-medium"><span id="semester-pill-dot" class="w-2 h-2 rounded-full mr-2"></span> <span id="semester-pill-text">Semester 1 aktif</span>
+      </div>
+     </div>
+     <div class="text-[11px] md:text-xs text-slate-700 text-right max-w-[8.5rem] md:max-w-xs leading-snug">
+      Fokus pada pembelajaran bertahap dengan materi yang ringan dan menyenangkan.
+     </div>
+    </section><!-- Lessons Grid -->
+    <section class="flex-1 mb-3" aria-label="Daftar bab pembelajaran">
+     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4"><!-- Card 1 --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between" data-type="bab" data-name="1" aria-label="Bab 1: Salam dan Perkenalan">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-1" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- People shaking hands -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M8.2 15.5c1.2-3.3 4.3-5.5 7.9-5.5 2.3 0 4.4.9 6 2.5l1.5 1.5 2-2c.4-.4 1-.4 1.4 0l3.2 3.2c.4.4.4 1 0 1.4l-4.1 4.1c-.8.8-2.1.8-2.9 0l-1.2-1.2-4.8 4.8c-.8.8-2.1.8-2.9 0l-.5-.5-2.4 2.4c-.8.8-2.1.8-2.9 0l-2.8-2.8c-.8-.8-.8-2.1 0-2.9l2.4-2.4-.7-.7c-1.1-1.1-1.5-2.8-1-4.4Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="bab1-ar" class="font-semibold text-right truncate">التحيات والتعارف</p>
+         <p id="bab1-id" class="text-xs md:text-sm text-slate-700 truncate">Salam &amp; Perkenalan</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Bab 1</span> <span class="font-medium">Materi Dasar</span>
+       </div></button> <!-- Card 2 --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between" data-type="bab" data-name="2" aria-label="Bab 2: Keluarga">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-2" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- Family icon -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M14 11a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm20 0a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM7 19c-2.2 0-4 1.8-4 4v6.5c0 .8.7 1.5 1.5 1.5H11v-6c0-2.4 1.1-4.6 2.9-6H7Zm26 0h-6.9A7.9 7.9 0 0 1 29 25v6h6.5c.8 0 1.5-.7 1.5-1.5V23c0-2.2-1.8-4-4-4Zm-13 0a6 6 0 0 0-6 6v6c0 .6.4 1 1 1h10c.6 0 1-.4 1-1v-6a6 6 0 0 0-6-6Zm0-8a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="bab2-ar" class="font-semibold text-right truncate">الأسرة</p>
+         <p id="bab2-id" class="text-xs md:text-sm text-slate-700 truncate">Keluarga</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Bab 2</span> <span class="font-medium">Kosakata &amp; Dialog</span>
+       </div></button> <!-- Card 3 --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between" data-type="bab" data-name="3" aria-label="Bab 3: Sekolah">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-3" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- School / mosque-domed building -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M20 6.5c-2.4 1.8-4 3.8-4 6.2 0 2.6 1.9 4.8 4 6.1 2.1-1.3 4-3.5 4-6.1 0-2.4-1.6-4.4-4-6.2Zm-9 9.5v13H8.5A1.5 1.5 0 0 1 7 27.5V19c0-1.1.9-2 2-2h2Zm18 0h2c1.1 0 2 .9 2 2v8.5c0 .8-.7 1.5-1.5 1.5H29V16Zm-11 0h4a2 2 0 0 1 2 2v11.5c0 .6-.4 1-1 1H17a1 1 0 0 1-1-1V18a2 2 0 0 1 2-2Zm1.5 4a1.5 1.5 0 1 0 0 3h1a1.5 1.5 0 1 0 0-3h-1Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="bab3-ar" class="font-semibold text-right truncate">المدرسة</p>
+         <p id="bab3-id" class="text-xs md:text-sm text-slate-700 truncate">Sekolah</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Bab 3</span> <span class="font-medium">Lingkungan Belajar</span>
+       </div></button> <!-- Evaluasi 1 (after Bab 3) --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between border-2" data-type="evaluasi" data-name="E1" aria-label="Evaluasi 1 untuk Bab 1 sampai 3">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-e1" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- Checklist / exam icon -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M13 7c-1.1 0-2 .9-2 2v22c0 .6.4 1 1 1h16c.6 0 1-.4 1-1V12.4c0-.3-.1-.5-.3-.7L24.3 7.3A1 1 0 0 0 23.6 7H13Zm9 1.9 4.1 4.1H22a.9.9 0 0 1-1-.9V8.9ZM16.3 18.7a1 1 0 0 0-1.4 0l-1.6 1.6a1 1 0 1 0 1.4 1.4l.9-.9 2.3 2.3a1 1 0 0 0 1.4-1.4l-3-3Zm0 8a1 1 0 0 0-1.4 0l-1.6 1.6a1 1 0 1 0 1.4 1.4l.9-.9 2.3 2.3a1 1 0 0 0 1.4-1.4l-3-3ZM21 21a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Zm0 8a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="eva1-title" class="font-semibold text-left truncate">Evaluasi 1</p>
+         <p id="eva1-sub" class="text-xs md:text-sm text-slate-700 truncate">Bab 1 – 3</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Latihan Pemahaman</span> <span class="font-medium">Kuis Ringan</span>
+       </div></button> <!-- Card 4 --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between" data-type="bab" data-name="4" aria-label="Bab 4: Kehidupan Sehari-hari">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-4" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- Daily life (calendar & clock) -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M11 8a1 1 0 0 0-1 1v1H9a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h10.5a8.5 8.5 0 0 1 8.5-8.5V13a3 3 0 0 0-3-3h-1V9a1 1 0 1 0-2 0v1H14V9a1 1 0 0 0-1-1Zm-2 7h18v3.1A8.5 8.5 0 0 0 19.5 29H9a1 1 0 0 1-1-1V15Zm19.5 5A6.5 6.5 0 1 0 35 30.5 6.5 6.5 0 0 0 28.5 20Zm0 2a1 1 0 0 1 1 1v3.1l1.7 1.7a1 1 0 0 1-1.4 1.4l-2-2A1 1 0 0 1 27.5 27V23a1 1 0 0 1 1-1Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="bab4-ar" class="font-semibold text-right truncate">الْحَيَاةُ الْيَوْمِيَّةُ</p>
+         <p id="bab4-id" class="text-xs md:text-sm text-slate-700 truncate">Kehidupan Sehari-hari</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Bab 4</span> <span class="font-medium">Ungkapan Aktivitas</span>
+       </div></button> <!-- Card 5 --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between" data-type="bab" data-name="5" aria-label="Bab 5: Hobi">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-5" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- Hobby icon (ball & note) -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M18 8a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 2c1.1 0 2.1.3 3 .8l-2.2 2.2A3 3 0 0 0 14.9 15L12.7 12.8A5.9 5.9 0 0 1 18 10Zm-6 8c0-.7.1-1.3.3-1.9l2.3 2.3a3 3 0 0 0 3.9.3l2.6 2.6A5.9 5.9 0 0 1 12 18Zm14.5-5.5a1 1 0 0 0-1.5.9v10.7a3.3 3.3 0 0 0-2-.6 3.8 3.8 0 0 0-3.5 2.2A3.7 3.7 0 0 0 22 30.5a3.8 3.8 0 0 0 3.5-2.2c.3-.6.5-1.3.5-2V17l3-.9V13l-2.5-.5Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="bab5-ar" class="font-semibold text-right truncate">الهواية</p>
+         <p id="bab5-id" class="text-xs md:text-sm text-slate-700 truncate">Hobi</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Bab 5</span> <span class="font-medium">Minat &amp; Bakat</span>
+       </div></button> <!-- Card 6 --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between" data-type="bab" data-name="6" aria-label="Bab 6: Makanan dan Minuman">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-6" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- Food & drink icon -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M12 8a1 1 0 0 0-1 1v7.2a3.8 3.8 0 0 0 3 3.7V29a1 1 0 1 0 2 0v-9.1a3.8 3.8 0 0 0 3-3.7V9a1 1 0 1 0-2 0v7c0 1-.7 1.9-1.7 2-.9-.1-1.3-.7-1.3-1.7V9a1 1 0 1 0-2 0v7.3c0 1-.4 1.6-1.3 1.7-.9-.1-1.7-1-1.7-2V9a1 1 0 0 0-1-1Zm13 .5-2.8 4.2c-.2.2-.2.5-.1.7l2.6 4c.2.3.7.4 1 .2l1.3-.8.7 10.3c.1 1.5 1.3 2.7 2.8 2.7H32a2.7 2.7 0 0 0 2.7-2.7L35 13a1 1 0 0 0-.9-1.1L25 8.5Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="bab6-ar" class="font-semibold text-right truncate">الطعام و الشراب</p>
+         <p id="bab6-id" class="text-xs md:text-sm text-slate-700 truncate">Makanan dan Minuman</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Bab 6</span> <span class="font-medium">Ungkapan Sehari-hari</span>
+       </div></button> <!-- Evaluasi 2 (after Bab 6) --> <button type="button" class="lesson-card group relative w-full text-left rounded-2xl px-4 py-3 md:px-5 md:py-4 flex flex-col justify-between border-2" data-type="evaluasi" data-name="E2" aria-label="Evaluasi 2 untuk Bab 4 sampai 6">
+       <div class="flex items-start gap-3"><!-- Icon -->
+        <div id="icon-e2" class="flex items-center justify-center rounded-xl w-10 h-10 md:w-11 md:h-11 shrink-0"><!-- Star medal icon -->
+         <svg viewbox="0 0 40 40" aria-hidden="true" class="w-6 h-6 text-slate-800"><path fill="currentColor" d="M20 6a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm0 3.1 1.5 2.9 3.2.5-2.3 2.3.5 3.2L20 16.5l-2.9 1.5.5-3.2-2.3-2.3 3.2-.5L20 9.1ZM14 21.5 11 31a1 1 0 0 0 1.4 1.2L17 30l3 2.2a1 1 0 0 0 1.2 0L24 30l4.6 2.2A1 1 0 0 0 30 31l-3-9.5a9 9 0 0 1-13 0Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <p id="eva2-title" class="font-semibold text-left truncate">Evaluasi 2</p>
+         <p id="eva2-sub" class="text-xs md:text-sm text-slate-700 truncate">Bab 4 – 6</p>
+        </div>
+       </div>
+       <div class="mt-2 flex items-center justify-between text-[11px] md:text-xs text-slate-700"><span>Penilaian Akhir</span> <span class="font-medium">Siap Ujian</span>
+       </div></button>
+     </div><!-- Info strip for selection feedback -->
+     <div id="info-strip" class="mt-4 rounded-2xl px-3.5 py-2.5 flex items-center justify-between text-xs md:text-sm">
+      <div class="flex items-center gap-2 min-w-0">
+       <div id="info-dot" class="w-2 h-2 rounded-full shrink-0"></div>
+       <p id="info-text" class="truncate">Sentuh salah satu bab untuk melihat detail materi.</p>
+      </div><span id="info-label" class="ml-3 shrink-0 font-medium text-[11px] md:text-xs"> Panduan </span>
+     </div>
+    </section>
+   </main><!-- Bottom Navigation -->
+   <footer class="bottom-nav w-full px-5 md:px-8 py-3.5 bg-white/90 backdrop-blur-sm">
+    <nav class="max-w-3xl mx-auto flex items-center justify-between gap-4" aria-label="Navigasi utama bawah"><!-- Semester Toggle -->
+     <div class="flex-1 flex items-center gap-2"><button id="semester-toggle" type="button" class="relative inline-flex items-center justify-between w-full max-w-xs rounded-full px-2 py-1.5 text-xs md:text-sm font-medium border transition-colors" aria-pressed="true" aria-label="Ganti Semester 1 atau Semester 2"> <span id="sem1-pill" class="flex-1 text-center rounded-full px-2 py-1"> Semester 1 </span> <span id="sem2-pill" class="flex-1 text-center rounded-full px-2 py-1"> Semester 2 </span> </button>
+     </div><!-- Profile Button --> <button id="profile-button" type="button" class="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs md:text-sm font-medium border transition-colors">
+      <div id="profile-icon" class="w-7 h-7 rounded-full flex items-center justify-center"><!-- Simple user icon -->
+       <svg viewbox="0 0 40 40" aria-hidden="true" class="w-5 h-5 text-slate-800"><path fill="currentColor" d="M20 8a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 12c-4 0-7 2.7-7 6v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2c0-3.3-3-6-7-6Z" opacity="0.9" />
+       </svg>
+      </div><span id="profile-label" class="whitespace-nowrap"> Profil </span> </button>
+    </nav>
+   </footer>
+  </div>
+  <script>
+    (function() {
+      // ----- CONFIG & DEFAULTS -----
+      const defaultConfig = {
+        main_title: "Bahasa Arab Kelas X MA",
+        semester_toggle_label: "Semester 1 / Semester 2",
+        profile_label: "Profil",
+        // Colors (max 5) - soft pastel palette
+        background_color: "#e0f2fe",   // light blue background
+        surface_color: "#fefce8",      // soft cream/krem for cards/info
+        text_color: "#0f172a",         // deep slate for readability
+        primary_action_color: "#22c55e", // mint/green for primary highlights
+        secondary_action_color: "#38bdf8", // soft blue for secondary actions
+        // Typography
+        font_family: "Noto Naskh Arabic",
+        font_size: 16
+      };
+
+      // Cache DOM references
+      const root = document.getElementById("app-root");
+      const mainTitleEl = document.getElementById("main-title");
+      const infoStrip = document.getElementById("info-strip");
+      const infoText = document.getElementById("info-text");
+      const infoDot = document.getElementById("info-dot");
+      const infoLabel = document.getElementById("info-label");
+      const semesterToggle = document.getElementById("semester-toggle");
+      const sem1Pill = document.getElementById("sem1-pill");
+      const sem2Pill = document.getElementById("sem2-pill");
+      const semesterPill = document.getElementById("semester-pill");
+      const semesterPillDot = document.getElementById("semester-pill-dot");
+      const semesterPillText = document.getElementById("semester-pill-text");
+      const profileButton = document.getElementById("profile-button");
+      const profileLabel = document.getElementById("profile-label");
+      const badgeOuter = document.getElementById("badge-outer");
+      const badgeInner = document.getElementById("badge-inner");
+      const badgeText = document.getElementById("badge-text");
+
+      const cornerAccent = document.getElementById("corner-accent");
+
+      // Arabic title elements for font usage
+      const arabicTitles = [
+        "bab1-ar", "bab2-ar", "bab3-ar",
+        "bab4-ar", "bab5-ar", "bab6-ar"
+      ].map(id => document.getElementById(id));
+      const cardIcons = [
+        "icon-1", "icon-2", "icon-3",
+        "icon-4", "icon-5", "icon-6",
+        "icon-e1", "icon-e2"
+      ].map(id => document.getElementById(id));
+
+      // For base font stack
+      const baseFontStack = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+
+      // State (not in config): current semester
+      let currentSemester = 1;
+
+      // Helper: apply config to UI
+      function applyConfig(config) {
+        const cfg = Object.assign({}, defaultConfig, config || {});
+
+        // Colors
+        const bgColor = cfg.background_color || defaultConfig.background_color;
+        const surfaceColor = cfg.surface_color || defaultConfig.surface_color;
+        const textColor = cfg.text_color || defaultConfig.text_color;
+        const primary = cfg.primary_action_color || defaultConfig.primary_action_color;
+        const secondary = cfg.secondary_action_color || defaultConfig.secondary_action_color;
+
+        // Background & text
+        root.style.backgroundColor = bgColor;
+        document.body.style.backgroundColor = bgColor;
+        document.body.style.color = textColor;
+
+        // Main title text & color
+        mainTitleEl.textContent = cfg.main_title || defaultConfig.main_title;
+        mainTitleEl.style.color = textColor;
+
+        // Badge styling
+        badgeOuter.style.backgroundColor = secondary;
+        badgeInner.style.backgroundColor = primary;
+
+        // Corner accent
+        cornerAccent.style.color = textColor;
+
+        // Card surfaces
+        const lessonCards = document.querySelectorAll(".lesson-card");
+        lessonCards.forEach(card => {
+          const type = card.getAttribute("data-type");
+          if (type === "evaluasi") {
+            card.style.backgroundColor = surfaceColor;
+            card.style.borderColor = primary;
+          } else {
+            card.style.backgroundColor = "#ffffff";
+            card.style.borderColor = "transparent";
+          }
+          card.style.color = textColor;
+        });
+
+        // Icons backgrounds
+        cardIcons.forEach((iconWrap, idx) => {
+          if (!iconWrap) return;
+          if (idx <= 2) {
+            // Bab 1-3: blue-ish
+            iconWrap.style.backgroundColor = secondary + "1F";
+          } else if (idx <= 5) {
+            // Bab 4-6: green-ish
+            iconWrap.style.backgroundColor = primary + "20";
+          } else {
+            // Evaluasi
+            iconWrap.style.backgroundColor = "#ffffff";
+          }
+        });
+
+        // Info strip
+        infoStrip.style.backgroundColor = surfaceColor;
+        infoStrip.style.border = "1px solid " + secondary + "40";
+        infoText.style.color = textColor;
+        infoLabel.style.color = textColor;
+        infoDot.style.backgroundColor = primary;
+
+        // Semester pill
+        semesterPill.style.backgroundColor = "#ffffff";
+        semesterPill.style.borderColor = secondary + "60";
+        semesterPillDot.style.backgroundColor = primary;
+        semesterPillText.style.color = textColor;
+
+        // Semester toggle styling based on state
+        updateSemesterVisual(cfg);
+
+        // Profile button
+        profileButton.style.backgroundColor = "#ffffff";
+        profileButton.style.borderColor = secondary + "40";
+        profileLabel.textContent = cfg.profile_label || defaultConfig.profile_label;
+        profileLabel.style.color = textColor;
+
+        // Profile icon bg
+        const profileIcon = document.getElementById("profile-icon");
+        profileIcon.style.backgroundColor = surfaceColor;
+
+        // Typography
+        const customFont = cfg.font_family || defaultConfig.font_family;
+        const baseSize = Number(cfg.font_size) || defaultConfig.font_size;
+
+        // Base text (Latin) - apply to body
+        document.body.style.fontFamily = customFont + ", " + baseFontStack;
+        document.body.style.fontSize = baseSize + "px";
+
+        // Scale headings & smaller text
+        mainTitleEl.style.fontSize = (baseSize * 1.5) + "px";
+        document.getElementById("subtitle-text").style.fontSize = (baseSize * 0.9) + "px";
+
+        // Info strip text size
+        infoText.style.fontSize = (baseSize * 0.85) + "px";
+        infoLabel.style.fontSize = (baseSize * 0.8) + "px";
+
+        // Semester pills & profile label
+        sem1Pill.style.fontSize = (baseSize * 0.9) + "px";
+        sem2Pill.style.fontSize = (baseSize * 0.9) + "px";
+        profileLabel.style.fontSize = (baseSize * 0.9) + "px";
+
+        // Arabic titles: slightly larger, right-aligned
+        arabicTitles.forEach(el => {
+          if (!el) return;
+          el.style.fontFamily = customFont + ", " + baseFontStack;
+          el.style.fontSize = (baseSize * 1.1) + "px";
+          el.style.textAlign = "right";
+        });
+
+        // Badge text font
+        badgeText.style.fontFamily = customFont + ", " + baseFontStack;
+        badgeText.style.fontSize = (baseSize * 0.85) + "px";
+
+        // Edit panel: toggle label not shown directly, but we can use it in aria-label
+        semesterToggle.setAttribute(
+          "aria-label",
+          cfg.semester_toggle_label || defaultConfig.semester_toggle_label
+        );
+      }
+
+      function updateSemesterVisual(config) {
+        const cfg = Object.assign({}, defaultConfig, config || {});
+        const primary = cfg.primary_action_color || defaultConfig.primary_action_color;
+        const secondary = cfg.secondary_action_color || defaultConfig.secondary_action_color;
+        const textColor = cfg.text_color || defaultConfig.text_color;
+
+        // Toggle outline
+        semesterToggle.style.borderColor = secondary + "60";
+        semesterToggle.style.backgroundColor = "#ffffff";
+
+        if (currentSemester === 1) {
+          sem1Pill.style.backgroundColor = primary;
+          sem1Pill.style.color = "#ffffff";
+          sem2Pill.style.backgroundColor = "transparent";
+          sem2Pill.style.color = textColor;
+          semesterPillText.textContent = "Semester 1 aktif";
+        } else {
+          sem2Pill.style.backgroundColor = primary;
+          sem2Pill.style.color = "#ffffff";
+          sem1Pill.style.backgroundColor = "transparent";
+          sem1Pill.style.color = textColor;
+          semesterPillText.textContent = "Semester 2 aktif";
+        }
+      }
+
+      // ----- Interaction Logic -----
+      function setupInteractions() {
+        // Click on lesson/evaluasi cards: show friendly inline message
+        const cards = document.querySelectorAll(".lesson-card");
+        cards.forEach(card => {
+          card.addEventListener("click", () => {
+            const type = card.getAttribute("data-type");
+            const name = card.getAttribute("data-name");
+
+            let label = "";
+            if (type === "bab") {
+              const idx = parseInt(name, 10);
+              const arEl = document.getElementById("bab" + idx + "-ar");
+              const idEl = document.getElementById("bab" + idx + "-id");
+              const ar = arEl ? arEl.textContent.trim() : "";
+              const id = idEl ? idEl.textContent.trim() : "";
+              label = "Bab " + idx + " – " + id + " (" + ar + ")";
+            } else if (type === "evaluasi") {
+              if (name === "E1") {
+                label = "Evaluasi 1 – Bab 1–3";
+              } else if (name === "E2") {
+                label = "Evaluasi 2 – Bab 4–6";
+              }
+            }
+
+            infoText.textContent = "Kamu memilih: " + label + ". Di aplikasi asli, di sini akan terbuka halaman detail bab.";
+            infoLabel.textContent = type === "bab" ? "Bab Dipilih" : "Evaluasi Dipilih";
+
+            // Brief highlight
+            cards.forEach(c => c.style.opacity = "0.9");
+            card.style.opacity = "1";
+          });
+        });
+
+        // Semester toggle
+        semesterToggle.addEventListener("click", () => {
+          currentSemester = currentSemester === 1 ? 2 : 1;
+          applyConfig(window.elementSdk ? window.elementSdk.config : {});
+          if (currentSemester === 1) {
+            infoText.textContent = "Semester 1 aktif. Fokus pada materi dasar dan pengenalan.";
+          } else {
+            infoText.textContent = "Semester 2 aktif. Materi lanjutan untuk menguatkan pemahamanmu.";
+          }
+          infoLabel.textContent = "Semester";
+        });
+
+        // Profile button
+        profileButton.addEventListener("click", () => {
+          infoText.textContent = "Menu Profil akan menampilkan data santri, progres belajar, dan poin pencapaian.";
+          infoLabel.textContent = "Profil";
+        });
+      }
+
+      // ----- Element SDK Integration -----
+      function initElementSdk() {
+        if (!window.elementSdk) {
+          // If SDK not available, just apply defaults and interactions
+          applyConfig(defaultConfig);
+          setupInteractions();
+          return;
+        }
+
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange: async (config) => {
+            applyConfig(config);
+          },
+          mapToCapabilities: (config) => {
+            const cfg = config || defaultConfig;
+
+            // Recolorables - exactly 5, ordered by prominence
+            const recolorables = [
+              {
+                get: () => cfg.background_color || defaultConfig.background_color,
+                set: (value) => {
+                  cfg.background_color = value;
+                  window.elementSdk.setConfig({ background_color: value });
+                }
+              },
+              {
+                get: () => cfg.surface_color || defaultConfig.surface_color,
+                set: (value) => {
+                  cfg.surface_color = value;
+                  window.elementSdk.setConfig({ surface_color: value });
+                }
+              },
+              {
+                get: () => cfg.text_color || defaultConfig.text_color,
+                set: (value) => {
+                  cfg.text_color = value;
+                  window.elementSdk.setConfig({ text_color: value });
+                }
+              },
+              {
+                get: () => cfg.primary_action_color || defaultConfig.primary_action_color,
+                set: (value) => {
+                  cfg.primary_action_color = value;
+                  window.elementSdk.setConfig({ primary_action_color: value });
+                }
+              },
+              {
+                get: () => cfg.secondary_action_color || defaultConfig.secondary_action_color,
+                set: (value) => {
+                  cfg.secondary_action_color = value;
+                  window.elementSdk.setConfig({ secondary_action_color: value });
+                }
+              }
+            ];
+
+            const fontEditable = {
+              get: () => cfg.font_family || defaultConfig.font_family,
+              set: (value) => {
+                cfg.font_family = value;
+                window.elementSdk.setConfig({ font_family: value });
+              }
+            };
+
+            const fontSizeable = {
+              get: () => cfg.font_size || defaultConfig.font_size,
+              set: (value) => {
+                cfg.font_size = value;
+                window.elementSdk.setConfig({ font_size: value });
+              }
+            };
+
+            return {
+              recolorables,
+              borderables: [],
+              fontEditable,
+              fontSizeable
+            };
+          },
+          mapToEditPanelValues: (config) => {
+            const cfg = Object.assign({}, defaultConfig, config || {});
+            return new Map([
+              ["main_title", cfg.main_title || defaultConfig.main_title],
+              ["semester_toggle_label", cfg.semester_toggle_label || defaultConfig.semester_toggle_label],
+              ["profile_label", cfg.profile_label || defaultConfig.profile_label]
+            ]);
+          }
+        });
+
+        // Apply initial config & interactions
+        applyConfig(window.elementSdk.config || defaultConfig);
+        setupInteractions();
+      }
+
+      // Initialize immediately
+      initElementSdk();
+    })();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a5babfa4093e78f',t:'MTc2NDM1MTg1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

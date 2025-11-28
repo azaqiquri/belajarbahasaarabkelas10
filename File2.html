@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bab 1: التحيات والتعارف - Bahasa Arab Kelas X MA</title><!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script><!-- Canva SDKs -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+
+    /* Islamic geometric background pattern */
+    .islamic-bg {
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 2px, transparent 3px),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.16) 0, rgba(255,255,255,0.16) 2px, transparent 3px),
+        linear-gradient(135deg, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 1px, transparent 0),
+        linear-gradient(45deg, rgba(255,255,255,0.18) 0, rgba(255,255,255,0.18) 1px, transparent 0);
+      background-size: 90px 90px, 90px 90px, 36px 36px, 36px 36px;
+      background-position: 0 0, 100% 100%, 0 0, 0 0;
+    }
+
+    /* Card hover effect */
+    .submenu-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .submenu-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(15,23,42,0.14);
+    }
+
+    /* Decorative corner pattern */
+    .corner-pattern {
+      opacity: 0.12;
+      pointer-events: none;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="w-full h-full">
+  <div id="app-root" class="w-full h-full islamic-bg flex flex-col"><!-- Header Section -->
+   <header class="w-full pt-5 pb-4 px-5 md:px-8">
+    <div class="max-w-4xl mx-auto"><!-- Back Button --> <button id="back-button" type="button" class="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4 text-sm font-medium transition-colors" aria-label="Kembali ke menu bab">
+      <svg viewbox="0 0 24 24" aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><span id="back-text">Kembali</span> </button> <!-- Title Section -->
+     <div class="text-center"><!-- Decorative badge -->
+      <div class="inline-flex items-center justify-center mb-3">
+       <div id="badge-container" class="relative w-14 h-14 rounded-2xl rotate-45 flex items-center justify-center">
+        <div id="badge-inner" class="w-10 h-10 rounded-xl flex items-center justify-center"><span id="badge-number" class="text-xl font-bold text-white -rotate-45">1</span>
+        </div>
+       </div>
+      </div><!-- Arabic Title -->
+      <h1 id="title-arabic" class="text-3xl md:text-4xl font-bold mb-2">التحيات والتعارف</h1><!-- Indonesian Translation -->
+      <p id="title-indonesian" class="text-base md:text-lg font-medium mb-4">Salam dan Perkenalan</p><!-- Subtitle -->
+      <p id="subtitle" class="text-sm md:text-base max-w-2xl mx-auto">Pilih sub materi untuk memulai pembelajaran tentang salam dan perkenalan dalam Bahasa Arab</p>
+     </div><!-- Decorative corner pattern (top right) -->
+     <div class="corner-pattern absolute top-0 right-0 hidden md:block">
+      <svg width="120" height="120" viewbox="0 0 120 120" aria-hidden="true"><path id="corner-path" d="M0 0 L120 0 L120 120 Z" opacity="0.3" /> <circle cx="100" cy="20" r="3" id="corner-dot1" /> <circle cx="80" cy="40" r="3" id="corner-dot2" /> <circle cx="60" cy="60" r="3" id="corner-dot3" />
+      </svg>
+     </div>
+    </div>
+   </header><!-- Main Content -->
+   <main class="flex-1 px-5 md:px-8 pb-24 pt-2">
+    <div class="max-w-4xl mx-auto"><!-- Sub Menu Grid -->
+     <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5" aria-label="Sub menu pembelajaran"><!-- Card 1: Mufrodat --> <button type="button" class="submenu-card w-full text-left rounded-3xl p-5 md:p-6 flex flex-col gap-3" data-submenu="mufrodat" aria-label="Mufrodat - Kosakata tentang salam dan perkenalan">
+       <div class="flex items-start gap-4">
+        <div id="icon-mufrodat" class="flex items-center justify-center rounded-2xl w-14 h-14 md:w-16 md:h-16 shrink-0"><!-- Book/Dictionary Icon -->
+         <svg viewbox="0 0 48 48" aria-hidden="true" class="w-8 h-8 md:w-9 md:h-9"><path fill="currentColor" d="M13 8a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3V11a3 3 0 0 0-3-3H13Zm3 6h16a1 1 0 1 1 0 2H16a1 1 0 1 1 0-2Zm0 6h16a1 1 0 1 1 0 2H16a1 1 0 1 1 0-2Zm0 6h10a1 1 0 1 1 0 2H16a1 1 0 1 1 0-2Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <h3 id="mufrodat-title" class="text-xl md:text-2xl font-bold mb-1">Mufrodat</h3>
+         <p id="mufrodat-subtitle" class="text-sm md:text-base opacity-90">Kosakata tentang salam &amp; perkenalan</p>
+        </div>
+       </div>
+       <div class="flex items-center justify-start text-xs md:text-sm opacity-80"><span>📚 Vocabulary</span>
+       </div></button> <!-- Card 2: Qiroah --> <button type="button" class="submenu-card w-full text-left rounded-3xl p-5 md:p-6 flex flex-col gap-3" data-submenu="qiroah" aria-label="Qiroah - Teks bacaan dan audio">
+       <div class="flex items-start gap-4">
+        <div id="icon-qiroah" class="flex items-center justify-center rounded-2xl w-14 h-14 md:w-16 md:h-16 shrink-0"><!-- Open Book Icon -->
+         <svg viewbox="0 0 48 48" aria-hidden="true" class="w-8 h-8 md:w-9 md:h-9"><path fill="currentColor" d="M24 10c-3 0-6 1-8.5 2.5C13 14 10 14 7 14a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2c3 0 6 0 8.5 1.5 2.5 1.5 5.5 2.5 8.5 2.5s6-1 8.5-2.5C35 36 38 36 41 36a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2c-3 0-6 0-8.5 1.5C30 14 27 13 24 13v-3Zm0 4v20c-2.5 0-5 .8-7 2V16c2-1.2 4.5-2 7-2Zm2 0c2.5 0 5 .8 7 2v20c-2-1.2-4.5-2-7-2V14Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <h3 id="qiroah-title" class="text-xl md:text-2xl font-bold mb-1">Qiroah</h3>
+         <p id="qiroah-subtitle" class="text-sm md:text-base opacity-90">Teks bacaan dan audio</p>
+        </div>
+       </div>
+       <div class="flex items-center justify-start text-xs md:text-sm opacity-80"><span>📖 Reading</span>
+       </div></button> <!-- Card 3: Hiwar --> <button type="button" class="submenu-card w-full text-left rounded-3xl p-5 md:p-6 flex flex-col gap-3" data-submenu="hiwar" aria-label="Hiwar - Video percakapan salam dan perkenalan">
+       <div class="flex items-start gap-4">
+        <div id="icon-hiwar" class="flex items-center justify-center rounded-2xl w-14 h-14 md:w-16 md:h-16 shrink-0"><!-- Chat/Conversation Icon -->
+         <svg viewbox="0 0 48 48" aria-hidden="true" class="w-8 h-8 md:w-9 md:h-9"><path fill="currentColor" d="M12 8a4 4 0 0 0-4 4v16a4 4 0 0 0 4 4h4v6a1 1 0 0 0 1.7.7L24 32h8a4 4 0 0 0 4-4V12a4 4 0 0 0-4-4H12Zm2 8h16a1 1 0 1 1 0 2H14a1 1 0 1 1 0-2Zm0 6h12a1 1 0 1 1 0 2H14a1 1 0 1 1 0-2Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <h3 id="hiwar-title" class="text-xl md:text-2xl font-bold mb-1">Hiwar</h3>
+         <p id="hiwar-subtitle" class="text-sm md:text-base opacity-90">Video percakapan salam &amp; perkenalan</p>
+        </div>
+       </div>
+       <div class="flex items-center justify-start text-xs md:text-sm opacity-80"><span>💬 Conversation</span>
+       </div></button> <!-- Card 4: Qowaid --> <button type="button" class="submenu-card w-full text-left rounded-3xl p-5 md:p-6 flex flex-col gap-3" data-submenu="qowaid" aria-label="Qowaid - Materi qawaid tata bahasa">
+       <div class="flex items-start gap-4">
+        <div id="icon-qowaid" class="flex items-center justify-center rounded-2xl w-14 h-14 md:w-16 md:h-16 shrink-0"><!-- Blackboard/Grammar Icon -->
+         <svg viewbox="0 0 48 48" aria-hidden="true" class="w-8 h-8 md:w-9 md:h-9"><path fill="currentColor" d="M8 10a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h32a2 2 0 0 0 2-2V12a2 2 0 0 0-2-2H8Zm4 6h8a1 1 0 1 1 0 2h-8a1 1 0 1 1 0-2Zm0 6h12a1 1 0 1 1 0 2H12a1 1 0 1 1 0-2Zm0 6h10a1 1 0 1 1 0 2H12a1 1 0 1 1 0-2Zm18-10a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <h3 id="qowaid-title" class="text-xl md:text-2xl font-bold mb-1">Qowaid</h3>
+         <p id="qowaid-subtitle" class="text-sm md:text-base opacity-90">Materi qawaid</p>
+        </div>
+       </div>
+       <div class="flex items-center justify-start text-xs md:text-sm opacity-80"><span>📝 Grammar</span>
+       </div></button> <!-- Card 5: Quiz (Full width on mobile, spans 2 cols on larger screens) --> <button type="button" class="submenu-card w-full text-left rounded-3xl p-5 md:p-6 flex flex-col gap-3 sm:col-span-2" data-submenu="quiz" aria-label="Quiz - Mini game 10 soal">
+       <div class="flex items-start gap-4">
+        <div id="icon-quiz" class="flex items-center justify-center rounded-2xl w-14 h-14 md:w-16 md:h-16 shrink-0"><!-- Game/Quiz Icon -->
+         <svg viewbox="0 0 48 48" aria-hidden="true" class="w-8 h-8 md:w-9 md:h-9"><path fill="currentColor" d="M24 8a16 16 0 1 0 0 32 16 16 0 0 0 0-32Zm0 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-4 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-8 8a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z" opacity="0.9" />
+         </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+         <h3 id="quiz-title" class="text-xl md:text-2xl font-bold mb-1">Quiz</h3>
+         <p id="quiz-subtitle" class="text-sm md:text-base opacity-90">Mini game 10 soal</p>
+        </div>
+        <div id="quiz-badge" class="hidden sm:flex items-center justify-center px-3 py-1 rounded-full text-xs font-bold">
+         🎮 Game
+        </div>
+       </div>
+       <div class="flex items-center justify-start text-xs md:text-sm opacity-80"><span>🎯 Interactive Quiz</span>
+       </div></button>
+     </section><!-- Info Message -->
+     <div id="info-message" class="mt-6 rounded-2xl p-4 flex items-start gap-3">
+      <div id="info-icon" class="w-8 h-8 rounded-full flex items-center justify-center shrink-0"><span class="text-lg">💡</span>
+      </div>
+      <p id="info-text" class="text-sm md:text-base flex-1">Klik salah satu sub menu di atas untuk memulai pembelajaran. Setiap materi dirancang untuk membantu kamu memahami salam dan perkenalan dalam Bahasa Arab dengan mudah.</p>
+     </div>
+    </div>
+   </main><!-- Bottom Navigation -->
+   <footer class="w-full px-5 md:px-8 py-4 bg-white/90 backdrop-blur-sm" style="box-shadow: 0 -8px 20px rgba(15,23,42,0.12);">
+    <div class="max-w-4xl mx-auto flex items-center justify-between"><!-- Progress Indicator -->
+     <div class="flex items-center gap-2">
+      <div id="progress-container" class="flex items-center gap-1.5">
+       <div id="progress-dot-1" class="w-2 h-2 rounded-full"></div>
+       <div id="progress-dot-2" class="w-2 h-2 rounded-full opacity-40"></div>
+       <div id="progress-dot-3" class="w-2 h-2 rounded-full opacity-40"></div>
+       <div id="progress-dot-4" class="w-2 h-2 rounded-full opacity-40"></div>
+       <div id="progress-dot-5" class="w-2 h-2 rounded-full opacity-40"></div>
+      </div><span id="progress-text" class="text-xs md:text-sm font-medium ml-2"> Bab 1 dari 6 </span>
+     </div><!-- Home Button --> <button id="home-button" type="button" class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors" aria-label="Kembali ke halaman utama">
+      <svg viewbox="0 0 24 24" aria-hidden="true" class="w-5 h-5" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5Z" opacity="0.9" />
+      </svg><span id="home-text">Home</span> </button>
+    </div>
+   </footer>
+  </div>
+  <script>
+    (function() {
+      // ----- CONFIG & DEFAULTS -----
+      const defaultConfig = {
+        bab_title_arabic: "التحيات والتعارف",
+        bab_title_indonesian: "Salam dan Perkenalan",
+        back_button_text: "Kembali",
+        home_button_text: "Home",
+        // Colors (max 5) - soft pastel Islamic theme
+        background_color: "#d1fae5",      // mint green background
+        surface_color: "#fef3c7",         // soft cream for cards
+        text_color: "#0f172a",            // deep slate for text
+        primary_action_color: "#10b981",  // emerald green for primary
+        secondary_action_color: "#60a5fa" // soft blue for secondary
+      };
+
+      // Cache DOM references
+      const root = document.getElementById("app-root");
+      const titleArabic = document.getElementById("title-arabic");
+      const titleIndonesian = document.getElementById("title-indonesian");
+      const subtitle = document.getElementById("subtitle");
+      const backButton = document.getElementById("back-button");
+      const backText = document.getElementById("back-text");
+      const homeButton = document.getElementById("home-button");
+      const homeText = document.getElementById("home-text");
+      const badgeContainer = document.getElementById("badge-container");
+      const badgeInner = document.getElementById("badge-inner");
+      const badgeNumber = document.getElementById("badge-number");
+      const infoMessage = document.getElementById("info-message");
+      const infoIcon = document.getElementById("info-icon");
+      const infoText = document.getElementById("info-text");
+      const progressText = document.getElementById("progress-text");
+
+      // Sub menu cards
+      const submenuCards = document.querySelectorAll(".submenu-card");
+      const iconElements = {
+        mufrodat: document.getElementById("icon-mufrodat"),
+        qiroah: document.getElementById("icon-qiroah"),
+        hiwar: document.getElementById("icon-hiwar"),
+        qowaid: document.getElementById("icon-qowaid"),
+        quiz: document.getElementById("icon-quiz")
+      };
+
+      const titleElements = {
+        mufrodat: document.getElementById("mufrodat-title"),
+        qiroah: document.getElementById("qiroah-title"),
+        hiwar: document.getElementById("hiwar-title"),
+        qowaid: document.getElementById("qowaid-title"),
+        quiz: document.getElementById("quiz-title")
+      };
+
+      const subtitleElements = {
+        mufrodat: document.getElementById("mufrodat-subtitle"),
+        qiroah: document.getElementById("qiroah-subtitle"),
+        hiwar: document.getElementById("hiwar-subtitle"),
+        qowaid: document.getElementById("qowaid-subtitle"),
+        quiz: document.getElementById("quiz-subtitle")
+      };
+
+      const quizBadge = document.getElementById("quiz-badge");
+      const progressDots = [
+        document.getElementById("progress-dot-1"),
+        document.getElementById("progress-dot-2"),
+        document.getElementById("progress-dot-3"),
+        document.getElementById("progress-dot-4"),
+        document.getElementById("progress-dot-5")
+      ];
+
+      // Corner decorative elements
+      const cornerPath = document.getElementById("corner-path");
+      const cornerDots = [
+        document.getElementById("corner-dot1"),
+        document.getElementById("corner-dot2"),
+        document.getElementById("corner-dot3")
+      ];
+
+      const baseFontStack = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
+
+      // Helper: apply config to UI
+      function applyConfig(config) {
+        const cfg = Object.assign({}, defaultConfig, config || {});
+
+        // Colors
+        const bgColor = cfg.background_color || defaultConfig.background_color;
+        const surfaceColor = cfg.surface_color || defaultConfig.surface_color;
+        const textColor = cfg.text_color || defaultConfig.text_color;
+        const primary = cfg.primary_action_color || defaultConfig.primary_action_color;
+        const secondary = cfg.secondary_action_color || defaultConfig.secondary_action_color;
+
+        // Background & text
+        root.style.backgroundColor = bgColor;
+        document.body.style.backgroundColor = bgColor;
+        document.body.style.color = textColor;
+
+        // Titles
+        titleArabic.textContent = cfg.bab_title_arabic || defaultConfig.bab_title_arabic;
+        titleArabic.style.color = textColor;
+
+        titleIndonesian.textContent = cfg.bab_title_indonesian || defaultConfig.bab_title_indonesian;
+        titleIndonesian.style.color = textColor;
+
+        subtitle.style.color = textColor;
+
+        // Badge styling
+        badgeContainer.style.backgroundColor = primary;
+        badgeInner.style.backgroundColor = secondary;
+
+        // Back button
+        backButton.style.backgroundColor = "#ffffff";
+        backButton.style.borderColor = secondary + "40";
+        backButton.style.color = textColor;
+        backText.textContent = cfg.back_button_text || defaultConfig.back_button_text;
+
+        // Home button
+        homeButton.style.backgroundColor = "#ffffff";
+        homeButton.style.borderColor = secondary + "40";
+        homeButton.style.color = textColor;
+        homeText.textContent = cfg.home_button_text || defaultConfig.home_button_text;
+
+        // Sub menu cards
+        submenuCards.forEach((card, idx) => {
+          card.style.backgroundColor = "#ffffff";
+          card.style.color = textColor;
+          card.style.border = "1px solid " + secondary + "30";
+        });
+
+        // Icon backgrounds - alternate colors
+        const iconKeys = Object.keys(iconElements);
+        iconKeys.forEach((key, idx) => {
+          const iconEl = iconElements[key];
+          if (!iconEl) return;
+          
+          if (idx % 2 === 0) {
+            iconEl.style.backgroundColor = primary + "20";
+          } else {
+            iconEl.style.backgroundColor = secondary + "20";
+          }
+        });
+
+        // Quiz badge
+        quizBadge.style.backgroundColor = primary;
+        quizBadge.style.color = "#ffffff";
+
+        // Info message
+        infoMessage.style.backgroundColor = surfaceColor;
+        infoMessage.style.border = "1px solid " + secondary + "30";
+        infoText.style.color = textColor;
+        infoIcon.style.backgroundColor = primary + "20";
+
+        // Progress dots
+        progressDots.forEach(dot => {
+          if (dot) dot.style.backgroundColor = primary;
+        });
+        progressText.style.color = textColor;
+
+        // Corner decorative elements
+        if (cornerPath) cornerPath.setAttribute("fill", secondary);
+        cornerDots.forEach(dot => {
+          if (dot) dot.setAttribute("fill", primary);
+        });
+
+        // Typography
+        const customFont = cfg.font_family || "Noto Naskh Arabic";
+        const baseSize = Number(cfg.font_size) || 16;
+
+        document.body.style.fontFamily = customFont + ", " + baseFontStack;
+        document.body.style.fontSize = baseSize + "px";
+
+        // Arabic title - larger, with custom font
+        titleArabic.style.fontFamily = customFont + ", " + baseFontStack;
+        titleArabic.style.fontSize = (baseSize * 2) + "px";
+
+        // Indonesian title
+        titleIndonesian.style.fontSize = (baseSize * 1.2) + "px";
+
+        // Subtitle
+        subtitle.style.fontSize = (baseSize * 0.95) + "px";
+
+        // Sub menu titles
+        Object.values(titleElements).forEach(el => {
+          if (el) el.style.fontSize = (baseSize * 1.3) + "px";
+        });
+
+        // Sub menu subtitles
+        Object.values(subtitleElements).forEach(el => {
+          if (el) el.style.fontSize = (baseSize * 0.9) + "px";
+        });
+
+        // Buttons
+        backText.style.fontSize = (baseSize * 0.9) + "px";
+        homeText.style.fontSize = (baseSize * 0.9) + "px";
+
+        // Info text
+        infoText.style.fontSize = (baseSize * 0.9) + "px";
+
+        // Progress text
+        progressText.style.fontSize = (baseSize * 0.85) + "px";
+      }
+
+      // ----- Interaction Logic -----
+      function setupInteractions() {
+        // Click on sub menu cards
+        submenuCards.forEach(card => {
+          card.addEventListener("click", () => {
+            const submenu = card.getAttribute("data-submenu");
+            let message = "";
+
+            switch(submenu) {
+              case "mufrodat":
+                message = "Kamu memilih Mufrodat. Di sini akan ditampilkan daftar kosakata Bahasa Arab tentang salam dan perkenalan beserta artinya.";
+                break;
+              case "qiroah":
+                message = "Kamu memilih Qiroah. Halaman ini akan menampilkan teks bacaan Bahasa Arab dengan audio untuk melatih kemampuan membaca.";
+                break;
+              case "hiwar":
+                message = "Kamu memilih Hiwar. Video percakapan interaktif akan membantu kamu memahami dialog salam dan perkenalan.";
+                break;
+              case "qowaid":
+                message = "Kamu memilih Qowaid. Materi tata bahasa Arab akan dijelaskan dengan contoh-contoh yang mudah dipahami.";
+                break;
+              case "quiz":
+                message = "Kamu memilih Quiz! Siap-siap menjawab 10 soal interaktif untuk menguji pemahamanmu tentang Bab 1.";
+                break;
+            }
+
+            infoText.textContent = message;
+
+            // Brief highlight effect
+            submenuCards.forEach(c => c.style.opacity = "0.7");
+            card.style.opacity = "1";
+            setTimeout(() => {
+              submenuCards.forEach(c => c.style.opacity = "1");
+            }, 300);
+          });
+        });
+
+        // Back button
+        backButton.addEventListener("click", () => {
+          infoText.textContent = "Tombol Kembali akan membawa kamu ke halaman menu bab utama.";
+        });
+
+        // Home button
+        homeButton.addEventListener("click", () => {
+          infoText.textContent = "Tombol Home akan membawa kamu kembali ke halaman utama aplikasi pembelajaran.";
+        });
+      }
+
+      // ----- Element SDK Integration -----
+      function initElementSdk() {
+        if (!window.elementSdk) {
+          applyConfig(defaultConfig);
+          setupInteractions();
+          return;
+        }
+
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange: async (config) => {
+            applyConfig(config);
+          },
+          mapToCapabilities: (config) => {
+            const cfg = config || defaultConfig;
+
+            const recolorables = [
+              {
+                get: () => cfg.background_color || defaultConfig.background_color,
+                set: (value) => {
+                  cfg.background_color = value;
+                  window.elementSdk.setConfig({ background_color: value });
+                }
+              },
+              {
+                get: () => cfg.surface_color || defaultConfig.surface_color,
+                set: (value) => {
+                  cfg.surface_color = value;
+                  window.elementSdk.setConfig({ surface_color: value });
+                }
+              },
+              {
+                get: () => cfg.text_color || defaultConfig.text_color,
+                set: (value) => {
+                  cfg.text_color = value;
+                  window.elementSdk.setConfig({ text_color: value });
+                }
+              },
+              {
+                get: () => cfg.primary_action_color || defaultConfig.primary_action_color,
+                set: (value) => {
+                  cfg.primary_action_color = value;
+                  window.elementSdk.setConfig({ primary_action_color: value });
+                }
+              },
+              {
+                get: () => cfg.secondary_action_color || defaultConfig.secondary_action_color,
+                set: (value) => {
+                  cfg.secondary_action_color = value;
+                  window.elementSdk.setConfig({ secondary_action_color: value });
+                }
+              }
+            ];
+
+            const fontEditable = {
+              get: () => cfg.font_family || "Noto Naskh Arabic",
+              set: (value) => {
+                cfg.font_family = value;
+                window.elementSdk.setConfig({ font_family: value });
+              }
+            };
+
+            const fontSizeable = {
+              get: () => cfg.font_size || 16,
+              set: (value) => {
+                cfg.font_size = value;
+                window.elementSdk.setConfig({ font_size: value });
+              }
+            };
+
+            return {
+              recolorables,
+              borderables: [],
+              fontEditable,
+              fontSizeable
+            };
+          },
+          mapToEditPanelValues: (config) => {
+            const cfg = Object.assign({}, defaultConfig, config || {});
+            return new Map([
+              ["bab_title_arabic", cfg.bab_title_arabic || defaultConfig.bab_title_arabic],
+              ["bab_title_indonesian", cfg.bab_title_indonesian || defaultConfig.bab_title_indonesian],
+              ["back_button_text", cfg.back_button_text || defaultConfig.back_button_text],
+              ["home_button_text", cfg.home_button_text || defaultConfig.home_button_text]
+            ]);
+          }
+        });
+
+        applyConfig(window.elementSdk.config || defaultConfig);
+        setupInteractions();
+      }
+
+      // Initialize immediately
+      initElementSdk();
+    })();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a5bb34c0789b5be',t:'MTc2NDM1MjE1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
